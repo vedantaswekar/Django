@@ -1,0 +1,2 @@
+# YBITNewsPortal
+This uses django
