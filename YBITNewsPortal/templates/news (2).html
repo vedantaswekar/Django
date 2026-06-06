@@ -1,0 +1,31 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+  </head>
+  <body>
+    <div class="hero-section">
+      <div class="content">
+        <h1>{{ head_msg }}</h1>
+        <ul>
+          <li class="links">{{ sub_msg1 }}</li>
+          <li class="links">{{ sub_msg2 }}</li>
+          <li class="links">{{ sub_msg3 }}</li>
+        </ul>
+        <div class="images">
+          {% for image in images %}
+          <img
+            src="{% static image %}"
+            alt="{{ head_msg }} image {{ forloop.counter }}"
+            class="img"
+          />
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

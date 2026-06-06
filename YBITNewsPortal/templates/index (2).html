@@ -1,0 +1,28 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YBIT</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+  </head>
+  <body>
+    <div class="hero-section">
+      <div class="content">
+        <h1>{{ head_msg }}</h1>
+        <ul>
+          <li class="links">
+            <a href="{% url 'movies' %}">Movie Information</a>
+          </li>
+          <li class="links">
+            <a href="{% url 'sports' %}">Sports Information</a>
+          </li>
+          <li class="links">
+            <a href="{% url 'politics' %}">Politics Information</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
